@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* font-family: 'Libre Baskerville', serif; */
+/* font-family: 'Montserrat', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3e5d8;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagina-da-receita {
+    background-color: #fff;
+    width: 640px;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.capa-da-receita {
+    display: flex;
+    justify-content: center;
+}
+
+.foto-da-receita {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.apresentacao-da-receita {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-da-receita {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    margin: 15px 0px;
+    color: #363533;
+}
+
+.descricao-da-receita {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #4e454a;
+}
+
+.tempo-de-preparo-da-receita {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-preparo {
+    font-family: 'Montserrat', sans-serif;
+    color: #792a4a;
+    font-weight: 700;
+    font-size: 1em;
+    text-indent: 2em;
+    margin-bottom: 10px;
+}
+
+.lista-preparo {
+    margin-left: 4em;
+}
+
+.lista-preparo > li {
+    font-family: 'Montserrat', sans-serif;
+    color: #4e454a;
+    font-size: 0.9em;
+    margin: 5px 0px;
+}
+
+.ingredientes-da-receita {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-ingredientes {
+    font-family: 'Libre Baskerville', serif;
+    color: #814835;
+    font-weight: 700;
+    margin: 15px 0px;
+}
+
+.lista-de-ingredientes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coluna-um-lista-de-ingredientes,
+.coluna-dois-lista-de-ingredientes {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.coluna-um-lista-de-ingredientes > li,
+.coluna-dois-lista-de-ingredientes >li {
+    color: #4e454a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    margin: 7px 0px;
+}
+
+.divisor {
+    border: none;
+    margin: 20px 0px;
+    border: 0.001em solid #bebdbc;
+    border-radius: 10px;
+}
