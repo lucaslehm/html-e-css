@@ -6,15 +6,23 @@
 /* font-family: 'Libre Baskerville', serif; */
 /* font-family: 'Montserrat', sans-serif; */
 
+/*REFATORAR O CÓDIGO*/
+/*RESPONSIVIDADE (MOBILE - TV)*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --font0:'Libre Baskerville', serif;
+    --font1:'Montserrat', sans-serif;
+}
+
+
 body {
     background-color: #f3e5d8;
-    height: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +33,7 @@ body {
     width: 640px;
     padding: 25px;
     border-radius: 20px;
+    margin: 24px;
 }
 
 .capa-da-receita {
@@ -44,14 +53,14 @@ body {
 }
 
 .titulo-da-receita {
-    font-family: 'Libre Baskerville', serif;
+    font-family: var(--font0);
     font-weight: 700;
     margin: 15px 0px;
     color: #363533;
 }
 
 .descricao-da-receita {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font1);
     font-weight: 500;
     margin-bottom: 20px;
     color: #4e454a;
@@ -64,7 +73,7 @@ body {
 }
 
 .titulo-preparo {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font1);
     color: #792a4a;
     font-weight: 700;
     font-size: 1em;
@@ -74,13 +83,24 @@ body {
 
 .lista-preparo {
     margin-left: 4em;
+    list-style-type: none;
 }
 
-.lista-preparo > li {
-    font-family: 'Montserrat', sans-serif;
+.lista-preparo>li {
+    font-family: var(--font1);
     color: #4e454a;
     font-size: 0.9em;
     margin: 5px 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista-preparo li::before {
+    content: '\2022';
+    font-size: 30px;
+    margin-right: 0.4em;
+    color: #814835;
 }
 
 .ingredientes-da-receita {
@@ -90,7 +110,7 @@ body {
 }
 
 .titulo-ingredientes {
-    font-family: 'Libre Baskerville', serif;
+    font-family: var(--font0);
     color: #814835;
     font-weight: 700;
     margin: 15px 0px;
@@ -106,14 +126,25 @@ body {
 .coluna-dois-lista-de-ingredientes {
     width: 90%;
     margin-left: 1em;
+    list-style-type: none;
 }
 
-.coluna-um-lista-de-ingredientes > li,
-.coluna-dois-lista-de-ingredientes >li {
+.coluna-um-lista-de-ingredientes>li,
+.coluna-dois-lista-de-ingredientes>li {
     color: #4e454a;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font1);
     font-size: 0.9em;
     margin: 7px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.coluna-um-lista-de-ingredientes li::before,
+.coluna-dois-lista-de-ingredientes li::before {
+    content: '\2022';
+    font-size: 30px;
+    margin-right: 0.5em;
+    color: #814835;
 }
 
 .divisor {
@@ -121,4 +152,131 @@ body {
     margin: 20px 0px;
     border: 0.001em solid #bebdbc;
     border-radius: 10px;
+}
+
+.modo-de-preparo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-modo-de-preparo {
+    font-family: var(--font0);
+    color: #814835;
+    font-weight: 700;
+    margin: 15px 0px;
+}
+
+.lista-modo-de-preparo {
+    width: 94%;
+    margin-left: 1em;
+    list-style-type: none;
+    counter-reset: my-counter;
+}
+
+.lista-modo-de-preparo li {
+    color: #4e454a;
+    font-family: var(--font1);
+    font-size: 0.9em;
+    margin: 7px 0px;
+    display: flex;
+}
+
+.lista-modo-de-preparo li::before {
+    content: counter(my-counter)'. ';
+    counter-increment: my-counter;
+    font-weight: bold;
+    margin-right: 1.3em;
+    color: #814835;
+}
+
+.informacao-nutricional-da-receita {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-nutricional {
+    font-family: var(--font1);
+    color: #814835;
+    font-weight: 700;
+    margin: 15px 0px;
+}
+
+.descricao-nutricional {
+    font-family: var(--font1);
+    font-weight: 500;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    color: #4e454a;
+}
+
+.tabela-nutricional {
+    width: 100%;
+}
+
+.item-da-tabela-nutricional {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 60px;
+}
+
+.classificacao-nutricional, 
+.valor-nutricional {
+    font-family: var(--font1);
+    font-weight: 500;
+    font-size: 0.9em;
+    color: #4e454a;
+}
+
+.valor-nutricional {
+    font-weight: 700;
+    color: #814835;
+}
+
+.consideracoes-finais {
+    margin-top: 5em;
+    text-align: center;
+    font-family: var(--font1);
+    font-weight: 500;
+    font-size: 0.8em;
+    color: #4e454a;
+}
+
+.consideracoes-finais a {
+    text-decoration: none;
+    color: #814835;
+    font-weight: 700;
+}
+
+.consideracoes-finais a:hover {
+    text-decoration: underline;
+    color: #a8624b;
+}
+
+@media screen and (max-width: 500px) {
+
+    body {
+        background-color: #fff
+    }
+
+    .pagina-da-receita {
+        padding: 25px;
+        margin: 0px;
+    }
+    
+    .capa-da-receita {
+        display: block;
+    }
+    
+    .foto-da-receita {
+        border-radius: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .titulo-da-receita {
+        margin-top: 13.5em;
+    }
+    
 }
