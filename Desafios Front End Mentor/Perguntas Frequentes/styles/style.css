@@ -44,6 +44,7 @@ body {
 
 .perguntas {
     margin-bottom: 25px;
+    transition: all 0.3s;
 }
 
 .titulo-da-pergunta {
@@ -68,6 +69,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s;
 }
 
 .icone-para-abrir:hover {
@@ -79,6 +81,6 @@ body {
     color: #fff;
 }
 
-.resposta {
-    display: none;
+.icone-para-abrir.aberto {
+    background-color: #36183a;
 }
