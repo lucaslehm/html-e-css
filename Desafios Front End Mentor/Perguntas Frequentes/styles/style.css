@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #36183a;
+}
+
+body {
+    background-image: url(https://cdn.discordapp.com/attachments/1115436629356724224/1206578948092203080/background-pattern-desktop.jpg?ex=65dc8536&is=65ca1036&hm=4239f121bef405c7b62576cd7764093734e69703e444e159a97ef5069988a3fb&);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #f9eeff;
+    background-position: top;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perguntas-frequentes {
+    margin: 20px;
+    background-color: #fff;
+    padding: 25px;
+    width: 700px;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.faq-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.titulo-perguntas-frequentes {
+    font-size: 2.5em;
+}
+
+.perguntas {
+    margin-bottom: 25px;
+}
+
+.titulo-da-pergunta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo-pergunta {
+    font-weight: 700;
+}
+
+.titulo-pergunta:hover {
+    color: #a72de7;
+    cursor: pointer;
+}
+
+.icone-para-abrir {
+    background-color: #a72de7;
+    width: 24px;
+    height: 24px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone-para-abrir:hover {
+    background-color: #ba60eb;
+    cursor: pointer;
+}
+
+.bi {
+    color: #fff;
+}
+
+.resposta {
+    display: none;
+}
