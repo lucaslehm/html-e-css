@@ -43,8 +43,9 @@ body {
 }
 
 .perguntas {
-    margin-bottom: 25px;
-    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .titulo-da-pergunta {
@@ -83,4 +84,28 @@ body {
 
 .icone-para-abrir.aberto {
     background-color: #36183a;
+}
+
+@media screen and (max-width: 630px) {
+
+    body {
+        background-image: url(https://cdn.discordapp.com/attachments/1115436629356724224/1206973086042427392/bg_mobile.jpg?ex=65ddf448&is=65cb7f48&hm=4b56e7377c4bd4964433af23e6eace42b476b35f1a25b90e05a5f6e7152f7042&);
+    }
+
+    .perguntas-frequentes {
+        width: 400px;
+    }
+
+    .titulo-perguntas-frequentes {
+        font-size: 1.5em;
+    }
+
+    .titulo-pergunta {
+        width: 80%;
+        font-size: 0.9em;
+    }
+    
+    .resposta {
+        font-size: 0.8em;
+    }
 }
