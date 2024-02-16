@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-resultados {
+    width: 750px;
+    height: 520px;
+    border-radius: 40px;
+    box-shadow: 0px 8px 15px #e6ebfe;
+    display: flex;
+    background-color: #fff;
+    transition: all 0.4s ease;
+}
+
+.lado-a-resultado-geral {
+    background-image: linear-gradient(to top, #312ceb, #6743ff);
+    border-radius: 30px;
+    padding: 30px;
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resultado-titulo {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #c6c5fe;
+}
+
+.pontuacao-geral {
+    background-image: linear-gradient(to  top, #4734f0, #4f24cb);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pontuacao-geral-texto {
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.pontuacao-maxima {
+    color: #8779ff;
+    font-weight: 600;
+}
+
+.descricao-e-classificacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.classificacao-pontuacao-geral {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.descricao-pontuacao-geral {
+    font-size: 0.9em;
+    text-align: center;
+    width: 80%;
+}
+
+.lado-b-pontuacoes {
+    border-radius: 30px;
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:space-between;
+    padding: 30px;
+    background-color: #fff;
+}
+
+.titulo-pontuacoes {
+    color: #303b59;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.resultados {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resultado {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 12px;
+}
+
+.titulo-pontuacao-individual {
+    display: flex;
+    gap: 10px;
+}
+
+.reacao {
+    background-color: #fff6f5;
+}
+
+.memoria {
+    background-color: #fffbf2;
+}
+
+.verbal {
+    background-color: #f2fbfa;
+}
+
+.visual {
+    background-color: #f3f3fd;
+}
+
+.pontuacao-individual-texto,
+.pontuacao-individual {
+    color: #303b59;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.pontuacao-individual-maxima {
+    color: #8990a0;
+}
+
+.reacao-texto,
+.bi-lightning-charge {
+    color: #ed5355;
+}
+
+.memoria-texto,
+.bi-puzzle {
+    color: #fb9b2a;
+}
+
+.verbal-texto,
+.bi-chat-dots {
+    color: #34ab8b;
+}
+
+.visual-texto,
+.bi-eye {
+    color: #0f1bbb;
+}
+
+.botao-continuar {
+    border: none;
+    background-color: #303b59;
+    color: #fff;
+    padding: 20px 0px;
+    border-radius: 40px;
+    font-weight: 700;
+    transition: all 0.4s ease;
+}
+
+.botao-continuar:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to top, #312ceb, #6743ff);
+}
+
+@media screen and (max-width: 750px) {
+
+    .dashboard-resultados {
+        width: 500px;
+        height: 400px;
+    }
+
+    .pontuacao-geral {
+        width: 150px;
+        height: 150px;
+    }
+
+    .pontuacao-geral-texto {
+        font-size: 3.3em;
+    }
+    
+    .botao-continuar {
+        padding: 10px 0px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .dashboard-resultados {
+        width: 100%;
+        height: 100%;
+        border-radius: 00px;
+        box-shadow: 0px 0px 0px #e6ebfe00;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lado-a-resultado-geral {
+        border-radius: 0px  0px 30px 30px;
+        padding: 30px;
+        width: 100%;
+        height: 50%;
+    }
+
+    .lado-b-pontuacoes {
+        border-radius: 0px;
+        width: 100%;
+        height: 50%;
+    }
+
+}
