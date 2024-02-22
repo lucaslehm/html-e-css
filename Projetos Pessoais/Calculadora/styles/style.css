@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #274073;
+}
+
+.calculadora {
+    background-color: #F2F2F2;
+    padding: 20px;
+    border-radius: 20px;
+    width: 500px;
+    height: 700px;
+    box-shadow: 0px 0px 10px #00000056;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display {
+    background-color: black;
+    color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    align-items: flex-end;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.conteudo-display {
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+}
+
+.spoiler-resultado {
+    color: #686868;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+.botoes-calculadora {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.fileira-botoes {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0px;
+}
+
+.btn-calculadora {
+    width: 100%;
+    border: none;
+    background-color: #B3ADD9;
+    padding: 30px;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0px 3px 7px #00000018;
+    }
+
+.btn-calculadora:hover {
+    background-color: #cec9f3;
+}
+
+#btn-parentese-esq,
+#btn-parentese-dir,
+#btn-dividir,
+#btn-somar,
+#btn-subtrair,
+#btn-multiplicar {
+    background-color: #4B61A6;
+    color: #F2F2F2;
+}
+
+#btn-parentese-esq:hover,
+#btn-parentese-dir:hover,
+#btn-dividir:hover,
+#btn-somar:hover,
+#btn-subtrair:hover,
+#btn-multiplicar:hover {
+    background-color: #5f77c0;
+}
+
+#btn-igual {
+    background-color: #8091F2;
+}
+
+#btn-igual:hover {
+    background-color: #9ca8eb;
+}
+
+#btn-apaga {
+    background-color: #d44742;
+    color: #F2F2F2;
+}
+
+#btn-apaga:hover {
+    background-color: #eb5d58;
+}
