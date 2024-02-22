@@ -26,7 +26,7 @@ const spoilerResultado = document.querySelector('.spoiler-resultado')
 
 //Variavel de controle para o display
 
-let conta
+let conta = []
 
 document.addEventListener('click', function(e) {
     const el = e.target
@@ -38,14 +38,30 @@ document.addEventListener('click', function(e) {
 function escreveNoDisplay(botao) {
 
     if (botao === 'btn-apaga') {
-        conta = String(conta)
-        conta[conta.length] = 'A'
-        display.innerHTML = conta
+        conta.pop()
+        display.innerHTML = conta.join((''))
+    } else if (botao === 'btn-somar') {
+        if (conta[conta.length - 1] === '+') {
+            conta.pop()
+            const btn = document.querySelector('#'+ botao)
+            let valor = (btn.innerHTML)
+            conta.push(valor)
+            display.innerHTML = conta.join((''))
+        } else {
+            const btn = document.querySelector('#'+ botao)
+            let valor = (btn.innerHTML)
+            conta.push(valor)
+            display.innerHTML = conta.join((''))
+        }
+    } else if (botao === 'btn-igual') {
+        let expressao = conta.join('')
+        let resultado = eval(expressao)
+        display.innerHTML = resultado
     } else {
         const btn = document.querySelector('#'+ botao)
-        const valor = btn.innerHTML
-        conta = Number(btn.innerHTML)
-        display.innerHTML += conta
+        let valor = Number(btn.innerHTML)
+        conta.push(valor)
+        display.innerHTML = conta.join((''))
     }
 
 }
